@@ -3,3 +3,16 @@ body{
     background-color: #063161;
 
 }
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+
+  input::placeholder {
+    color: #000;
+    font-style: semi-bold;
+    padding-left: 20px;
+    font-size: larger;
+  }

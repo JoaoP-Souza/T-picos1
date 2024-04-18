@@ -30,8 +30,6 @@ body{
     margin-top: 55px;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .login-button {
@@ -46,7 +44,9 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
-} 
+    background-color: #bbb;
+    border: none;
+}
 
 .floating-text{
     margin-top: 55px;
@@ -61,5 +61,17 @@ body{
     cursor: pointer;
 }
 
+.floating-text a {
+    display: block;
+  }
 
+ .floating-text a:hover {
+     color: #ccc;
+     font-size: 22px;
+}
 
+input::placeholder {
+    color: #000;
+    font-style: semi-bold;
+    padding-left: 10px;
+  }
