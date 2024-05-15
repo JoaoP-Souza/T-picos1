@@ -70,3 +70,18 @@
     
 }
 
+
+.chat-flield{
+    width: 80%; /* Ajuste a largura conforme necessário */
+    height: 70%; /* Ajuste a altura conforme necessário */
+    max-width: 1200px; /* Define um máximo para a largura */
+    max-height: 800px; /* Define um máximo para a altura */
+    border: 1px solid #ccc; /* Adiciona uma borda ao contêiner */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona uma sombra */
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
