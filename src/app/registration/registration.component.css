@@ -24,15 +24,22 @@ body{
 
 }
 
+.fields {
+    margin-top: 55px;
+    justify-content: center;
+    align-items: center;
+}
 .user-cadastro-input {
     width: 850px;
     height: 40px;
     margin-top: 55px;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+
 
 
 }
+
 
 .cadastro-button {
     margin-top: 55px;

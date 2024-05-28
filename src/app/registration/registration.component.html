@@ -1,13 +1,17 @@
-<div class = "form-elements">
-    <div class = "Profile-icon"></div>
-    <input class = "user-cadastro-input" type="text" placeholder="NOME">
-    <input class = "user-cadastro-input" type="text" placeholder="E-MAIL">
-    <input class = "user-cadastro-input" type="password" placeholder="SENHA">
-    <input class = "user-cadastro-input" type="password" placeholder="REPETIR SENHA">
-    <button class = "cadastro-button">Começar atendimento</button>
-
-    <div class = "floating-text">
-        <p> Acessar atendimento direto</p>
+<div class="form-elements">
+    <div class="Profile-icon"></div>
+    <form class="form-element" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="fields">
+            <input class="user-cadastro-input" type="text" formControlName="username" placeholder="Username">
+            <input class="user-cadastro-input" type="email" formControlName="email" placeholder="Email">
+            <input class="user-cadastro-input" type="password" formControlName="password" placeholder="Password">
+            <input class="user-cadastro-input" type="password" formControlName="repeatPassword" placeholder="Repeat Password">
+        </div>
+        <button class ="cadastro-button" type="submit">Cadastrar</button>
+      </form>
+      
+    <div class="floating-text">
+      <p>Acessar atendimento direto</p>
     </div>
-
-</div>
+  </div>
+  

@@ -46,6 +46,7 @@ body{
     align-items: center;
     background-color: #bbb;
     border: none;
+    cursor: pointer;
 }
 
 .floating-text{
@@ -75,3 +76,5 @@ input::placeholder {
     font-style: semi-bold;
     padding-left: 10px;
   }
+
+  
