@@ -24,7 +24,7 @@ export class RegistrationComponent implements OnInit {
 
   onSubmit(): void {
     if (this.registrationForm.invalid) {
-      console.log('Form is invalid');
+      alert('insira dados válidos');
       return;
     }
 
@@ -32,7 +32,7 @@ export class RegistrationComponent implements OnInit {
     const repeatPassword = this.registrationForm.get('repeatPassword')?.value;
 
     if (password !== repeatPassword) {
-      console.log('Passwords do not match');
+      alert('Senhas devem ser iguais');
       return;
     }
 

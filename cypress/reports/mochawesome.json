@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-30T21:09:57.165Z",
+    "end": "2024-05-30T21:10:03.583Z",
+    "duration": 6418,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9871298f-3e5b-4b10-8ec1-a899b8ce5fd1",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\todo.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\todo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4ff56caf-6c3d-4afd-b873-9d072f1eab05",
+          "title": "casos de teste cadastrados",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "tentar logar no sistema com dados inválidos e verificar o erro",
+              "fullTitle": "casos de teste cadastrados tentar logar no sistema com dados inválidos e verificar o erro",
+              "timedOut": null,
+              "duration": 966,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[type=\"text\"]').clear().type('invalido');\ncy.get('[type=\"password\"]').clear().type('invalido');\ncy.get('.login-button').click();\ncy.on('window:alert', str => {\n  expect(str).to.equal('Credenciais inválidas');\n});",
+              "err": {},
+              "uuid": "23b65c95-6767-4d20-a2b2-1e9cf6e76cbe",
+              "parentUUID": "4ff56caf-6c3d-4afd-b873-9d072f1eab05",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "tentar cadastrar um usuario com dados invalidos",
+              "fullTitle": "casos de teste cadastrados tentar cadastrar um usuario com dados invalidos",
+              "timedOut": null,
+              "duration": 1451,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('Cadastrar').click();\ncy.get('[placeholder=\"Username\"]').clear().type('invalido');\ncy.get('[placeholder=\"Email\"]').clear().type('invalido');\ncy.get('[placeholder=\"Password\"]').clear().type('invalido');\ncy.get('[placeholder=\"Repeat Password\"]').clear().type('invalido');\ncy.on('window:alert', str => {\n  expect(str).to.equal('insira dados válidos');\n});",
+              "err": {},
+              "uuid": "a9afb669-1fdd-46d9-8cf3-baebc2a49763",
+              "parentUUID": "4ff56caf-6c3d-4afd-b873-9d072f1eab05",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "tentar cadastrar um usuario com senhas que nao sejam iguais",
+              "fullTitle": "casos de teste cadastrados tentar cadastrar um usuario com senhas que nao sejam iguais",
+              "timedOut": null,
+              "duration": 1409,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var credencial = makeid(6);\ncy.contains('Cadastrar').click();\ncy.get('[placeholder=\"Username\"]').clear().type(credencial);\ncy.get('[placeholder=\"Email\"]').clear().type(credencial + '@' + credencial);\ncy.get('[placeholder=\"Password\"]').clear().type(credencial);\ncy.get('[placeholder=\"Repeat Password\"]').clear().type(credencial + '1');\ncy.on('window:alert', str => {\n  expect(str).to.equal('Senhas devem ser iguais');\n});",
+              "err": {},
+              "uuid": "17fca5e2-f1a4-48a0-9314-de8bdc079f0d",
+              "parentUUID": "4ff56caf-6c3d-4afd-b873-9d072f1eab05",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve cadastrar usuario e acessar o chat com os dados cadastrados",
+              "fullTitle": "casos de teste cadastrados Deve cadastrar usuario e acessar o chat com os dados cadastrados",
+              "timedOut": null,
+              "duration": 2332,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var credencial = makeid(6);\ncy.contains('Cadastrar').click();\ncy.get('[placeholder=\"Username\"]').clear().type(credencial);\ncy.get('[placeholder=\"Email\"]').clear().type(credencial + '@' + credencial);\ncy.get('[placeholder=\"Password\"]').clear().type(credencial);\ncy.get('[placeholder=\"Repeat Password\"]').clear().type(credencial);\ncy.get('button').contains('Cadastrar').click();\ncy.visit('http://localhost:4200/login');\ncy.get('[type=\"text\"]').clear().type(credencial + '@' + credencial);\ncy.get('[type=\"password\"]').clear().type(credencial);\ncy.get('.login-button').click();\ncy.contains('Bem vindo ao atendimento automático da IWS!').should('exist');",
+              "err": {},
+              "uuid": "8bde8744-f556-4b01-810d-1e7f72c6f1fa",
+              "parentUUID": "4ff56caf-6c3d-4afd-b873-9d072f1eab05",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve acessar o chat sem cadastro",
+              "fullTitle": "casos de teste cadastrados Deve acessar o chat sem cadastro",
+              "timedOut": null,
+              "duration": 146,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo('bottom');\ncy.contains('Iniciar atendimento direto').click();\ncy.contains('Bem vindo ao atendimento automático da IWS!').should('exist');",
+              "err": {},
+              "uuid": "a0a915d3-5226-4339-8186-70892bafcdd5",
+              "parentUUID": "4ff56caf-6c3d-4afd-b873-9d072f1eab05",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "23b65c95-6767-4d20-a2b2-1e9cf6e76cbe",
+            "a9afb669-1fdd-46d9-8cf3-baebc2a49763",
+            "17fca5e2-f1a4-48a0-9314-de8bdc079f0d",
+            "8bde8744-f556-4b01-810d-1e7f72c6f1fa",
+            "a0a915d3-5226-4339-8186-70892bafcdd5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6304,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
