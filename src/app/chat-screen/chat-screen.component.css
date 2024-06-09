@@ -93,6 +93,31 @@
     align-items: center;
 }
 
+.manual-attendance {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manual-button {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline from link */
+}
+
+.manual-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 .back-button {
     margin-top: 30%;
     font-size: 25px;

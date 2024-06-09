@@ -68,5 +68,14 @@ body{
     cursor: pointer;
 }
 
+.floating-text a {
+    display: block;
+  }
+
+ .floating-text a:hover {
+     color: #ccc;
+     font-size: 22px;
+}
+
 
 
